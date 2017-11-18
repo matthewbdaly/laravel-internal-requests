@@ -26,6 +26,9 @@ class CartServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Matthewbdaly\LaravelInternalRequests\Contracts\Services\MakesInternalRequests', 'Matthewbdaly\LaravelInternalRequests\Services\InternalRequest');
+        $this->app->bind(
+            'Matthewbdaly\LaravelInternalRequests\Contracts\Services\MakesInternalRequests',
+            'Matthewbdaly\LaravelInternalRequests\Services\InternalRequest'
+        );
     }
 }
