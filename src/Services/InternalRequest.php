@@ -41,7 +41,7 @@ class InternalRequest implements MakesInternalRequests
     public function request(string $action, string $resource, array $data = [])
     {
         // Create request
-        $request = Request::create('/api/' . $resource, $action, $data, [], [], [
+        $request = Request::create($resource, $action, $data, [], [], [
             'HTTP_Accept'             => 'application/json',
         ]);
         // Get response
