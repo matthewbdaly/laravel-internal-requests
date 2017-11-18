@@ -5,7 +5,6 @@ namespace Tests\Unit\Services;
 use Tests\TestCase;
 use Mockery as m;
 use Matthewbdaly\LaravelInternalRequests\Services\InternalRequest;
-use Matthewbdaly\LaravelInternalRequests\Exceptions\FailedInternalRequestException;
 use Illuminate\Http\Response;
 
 class InternalRequestTest extends TestCase
@@ -22,7 +21,7 @@ class InternalRequestTest extends TestCase
 
     /**
      * @test
-     * @expectedException FailedInternalRequestException
+     * @expectedException Matthewbdaly\LaravelInternalRequests\Exceptions\FailedInternalRequestException
      */
     public function it_handles_failed_requests()
     {
