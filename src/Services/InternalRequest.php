@@ -7,6 +7,7 @@ use Matthewbdaly\LaravelInternalRequests\Contracts\Services\MakesInternalRequest
 use Illuminate\Foundation\Application;
 use Matthewbdaly\LaravelInternalRequests\Exceptions\FailedInternalRequestException;
 
+
 /**
  * Internal request service
  */
