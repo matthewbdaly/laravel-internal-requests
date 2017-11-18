@@ -21,7 +21,7 @@ class InternalRequest implements MakesInternalRequests
     /**
      * Constructor
      *
-     * @param Application $app        The app instance.
+     * @param Application $app The app instance.
      * @return void
      */
     public function __construct(Application $app)
