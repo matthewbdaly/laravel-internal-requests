@@ -1,13 +1,13 @@
 <?php
 
-namespace Matthewbdaly\LaravelCart\Providers;
+namespace Matthewbdaly\LaravelInternalRequests\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Service provider for shopping cart
+ * Service provider for internal requests
  */
-class CartServiceProvider extends ServiceProvider
+class InternalRequestServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

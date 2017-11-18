@@ -3,7 +3,7 @@
 namespace Matthewbdaly\LaravelInternalRequests\Services;
 
 use Illuminate\Http\Request;
-use Matthewbdaly\LaravelInternalRequests\Contracts\MakesInternalRequests;
+use Matthewbdaly\LaravelInternalRequests\Contracts\Services\MakesInternalRequests;
 use Illuminate\Foundation\Application;
 use Matthewbdaly\LaravelInternalRequests\Exceptions\FailedInternalRequestException;
 
