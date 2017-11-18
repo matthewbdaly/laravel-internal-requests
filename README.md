@@ -18,3 +18,18 @@ What do I want this for?
 I've used this approach for a mobile app that had offline functionality. Every time it made a change to some data, it needed to be able to store the changes locally. Then, when the app was online again, it needed to send the changes up in a batch so that they could be synced. I created a sync endpoint that used something like this to loop through every request in the batch and process it all in one go. If one failed, I could then catch the exception and persist the unsynced changes in a table in the database so that they could be resolved later without losing the data.
 
 I honestly can't think of any other situation where you'd want to use this approach, but someone else may.
+
+Usage
+-----
+
+Type-hint the interface `Matthewbdaly\LaravelInternalRequests\Contracts\Services\MakesInternalRequests` to retrieve the internal request service. Then use it as follows:
+
+```php
+$service->request('POST', '/api/resource', ['content' => 'blah']);
+```
+
+Any one request accepts three arguments:
+
+* The HTTP verb to use
+* The route to hit
+* The payload (optional)
