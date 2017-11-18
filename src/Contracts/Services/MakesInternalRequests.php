@@ -1,6 +1,6 @@
 <?php
 
-namespace Matthewbdaly\LaravelInternalRequests\Contracts;
+namespace Matthewbdaly\LaravelInternalRequests\Contracts\Services;
 
 interface MakesInternalRequests
 {
