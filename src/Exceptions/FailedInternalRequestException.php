@@ -3,7 +3,7 @@
 namespace Matthewbdaly\LaravelInternalRequests\Exceptions;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Exception for when a bulk sync job fails
