@@ -18,6 +18,7 @@ class InternalRequest implements MakesInternalRequests
      * @var $app
      */
     protected $app;
+    
     /**
      * Constructor
      *
@@ -28,6 +29,7 @@ class InternalRequest implements MakesInternalRequests
     {
         $this->app = $app;
     }
+
     /**
      * Make an internal request
      *
@@ -43,11 +45,13 @@ class InternalRequest implements MakesInternalRequests
         $request = Request::create($resource, $action, $data, [], [], [
             'HTTP_Accept'             => 'application/json',
         ]);
+
         // Get response
         $response = $this->app->handle($request);
         if ($response->getStatusCode() >= 400) {
             throw new FailedInternalRequestException($request, $response);
         }
+
         // Dispatch the request
         return $response;
     }
